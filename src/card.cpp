@@ -17,6 +17,20 @@ void Card::PrintCard(){
     std::cout << std::endl;
 }
 
+string PrintCard2(const vector<Card>& cards){
+
+    int len_cards = cards.size();
+    string str_cards = "[";
+    for (int i = 0; i < len_cards; ++i)
+    {
+        str_cards += to_string(cards[i].value);
+        if (i != len_cards - 1)
+            str_cards += ", ";
+    }
+    str_cards += "]";
+    return str_cards;
+}
+
 void Card::PrintValue(){
     if(value == 14)
         std::cout << "Escape";
