@@ -24,7 +24,7 @@ class Card{
         void PrintCard();
         void PrintValue();
         void Printcolor();
-        void printSpecialCard();
+       
 
 };
 
