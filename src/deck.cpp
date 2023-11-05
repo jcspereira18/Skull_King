@@ -1,5 +1,5 @@
 
-#include "deck.h"
+#include "../include/deck.h"
 
 void Deck::SetupCards(){
     Card c;
@@ -8,8 +8,8 @@ void Deck::SetupCards(){
         for( int i = (int)Colors:: red; i <= (int)Colors::black; i++ ){
             c.color = (Colors)i;
             c.number = (Numbers)j;
-            c.value = (int)c.number;    
-           cards.push_back(c);
+            c.value = (int)c.number;  
+            cards.push_back(c);
         }
     }
 
@@ -50,7 +50,7 @@ void Deck::PrintDeck(){
 }
 
 vector<Card> Deck::DealCards(int n){
-    
+
     hand.clear();
 
     for (int j = 0; j < n; j++){

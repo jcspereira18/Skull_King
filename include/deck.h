@@ -1,8 +1,8 @@
 #ifndef DECK
 #define DECK
 
-#include "card.h"
-#include "player.h"
+#include "../include/card.h"
+#include "../include/player.h"
 
 
 using namespace std;

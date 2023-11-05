@@ -23,12 +23,11 @@ class Card{
         Card();
         Card(Colors c, Numbers n);
         
-        void PrintCard();
         void PrintValue();
         void Printcolor();
-       
-
+        void PrintCard();
 };
+
 string PrintCard2(const vector<Card>& cards);
 
 #endif

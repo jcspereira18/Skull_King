@@ -1,13 +1,13 @@
 #ifndef PLAYER
 #define PLAYER
 
-#include "deck.h"
+#include "../include/deck.h"
  using namespace std;
 
 class Player{
     public:
-        std::string name;
-        std::vector<Card> hand;
+        string name;
+        vector<Card> hand;
         
         int points = 0;
 
@@ -20,6 +20,11 @@ class Player{
             Card popped_card = hand[index];
             hand.erase(hand.begin() + index);
             return popped_card;
+        }
+
+        Card push_card(int index){
+            Card pushed_card = hand[index];
+            return pushed_card;
         }
 
 };

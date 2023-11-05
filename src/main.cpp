@@ -1,8 +1,8 @@
 
-#include "game.h"
-#include "deck.h"
-#include "card.h"
-#include "player.h"
+#include "../include/game.h"
+#include "../include/deck.h"
+#include "../include/card.h"
+#include "../include/player.h"
 
 using namespace std;
 

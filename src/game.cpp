@@ -1,6 +1,5 @@
 
-#include "game.h"
-#include "card.h"
+#include "../include/game.h"
 
 void Game::game_play(){
 
@@ -27,7 +26,11 @@ void Game::game_play(){
         play_card(player1);
         print_players(players, i);
     }
-    
+ 
+    for(int i = 0; i < 4; i++){
+        cout << "Player " << players[i].name << ": ";
+        cout << cards_on_table[i].value << " " << cards_on_table[i].color << endl;
+    }
 }
 
 
@@ -41,14 +44,22 @@ void Game::play_card(Player* player){
         std::cin >> index;
         if (std::cin.fail())
             std::cerr << "Input Failure";
-        if (index < 0 || index > player->hand.size())
+        if (index <= 0 || index > player->hand.size()){
             std::cout << "Invalid index!\n";
+        }
         //else if (!can_play_card(player->cards[index - 1], top_card))
         //    std::cout << "Can not play " << player->cards[index - 1] << "!\n";
         else
             break;
     }
-    Card card = player->pop_card(index - 1);
+
+    //Card card = player->push_card(index - 1);
+    cards_on_table.push_back(player->hand[index - 1]);
+
+    //cout << "Card: " << cards_on_table[0].value << " " << cards_on_table[0].color << endl;
+    
+    //cout << "Card: " << card.value << " " << card.color << endl;
+    player->pop_card(index - 1);
 
     //std::cout << *player << " plays " << card << '\n';
   
@@ -58,8 +69,7 @@ void Game::print_players(std::vector<Player> players, int i){
     //for(int i = 0; i < players.size(); i++){
     
         cout << endl;
-        cout << "Player " << i+1 << endl;   
-        cout << "Name: " << players[i].name << endl;
+        cout << "Player " << players[i].name << endl;
     
         //for(int j = 0; j < players[i].hand.size(); j++)
         //    players[i].hand[j].PrintCard();

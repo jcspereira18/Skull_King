@@ -1,5 +1,5 @@
 
-#include "card.h"
+#include "../include/card.h"
 
 Card::Card(){
     color = red;
@@ -15,20 +15,6 @@ void Card::PrintCard(){
     PrintValue();
     Printcolor();
     std::cout << std::endl;
-}
-
-string PrintCard2(const vector<Card>& cards){
-
-    int len_cards = cards.size();
-    string str_cards = "[";
-    for (int i = 0; i < len_cards; ++i)
-    {
-        str_cards += to_string(cards[i].value);
-        if (i != len_cards - 1)
-            str_cards += ", ";
-    }
-    str_cards += "]";
-    return str_cards;
 }
 
 void Card::PrintValue(){
@@ -56,3 +42,19 @@ void Card::Printcolor(){
     else
         std::cout << " ";
 }
+
+string PrintCard2(const vector<Card>& cards){
+
+    string str_cards = "[";
+    for (int i = 0; i < cards.size(); ++i)
+    {
+        str_cards += to_string(cards[i].value);
+        str_cards += " ";
+        str_cards += to_string(cards[i].color);
+        if (i != cards.size() - 1)
+            str_cards += ", ";
+    }
+    str_cards += "]";
+    return str_cards;
+}
+
