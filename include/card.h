@@ -6,6 +6,8 @@
 #include <vector>
 #include <ctime>
 
+using namespace std;
+
 enum Colors {red, blue, yellow, black, white};
 
 enum Numbers {one=1, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen};
@@ -27,5 +29,6 @@ class Card{
        
 
 };
+string PrintCard2(const vector<Card>& cards);
 
 #endif
