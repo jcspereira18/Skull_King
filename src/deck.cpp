@@ -40,7 +40,7 @@ void Deck::SetupCards(){
 }
 
 void Deck::shuffle(){
-    std::random_shuffle(cards.begin(), cards.end());
+    random_shuffle(cards.begin(), cards.end());
 }
 
 void Deck::PrintDeck(){
@@ -48,3 +48,23 @@ void Deck::PrintDeck(){
         cards[i].PrintCard();
     }
 }
+
+vector<Card> Deck::DealCards(int n){
+    
+    hand.clear();
+
+    for (int j = 0; j < n; j++){
+        hand.push_back(cards.back());
+        cards.pop_back();
+    }
+    return hand;
+}
+
+void Deck::PrintHand(){
+    std::cout << "Your hand: " << std::endl;
+    for (int i = 0; i < hand.size(); i++){
+        hand[i].PrintCard();
+    }
+    std::cout << std::endl;
+}
+
