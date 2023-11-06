@@ -60,7 +60,7 @@ void Game::play_card(Player* player){
     
     //cout << "Card: " << card.value << " " << card.color << endl;
     player->pop_card(index - 1);
-
+    
     //std::cout << *player << " plays " << card << '\n';
   
 }
