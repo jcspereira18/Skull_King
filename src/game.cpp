@@ -7,6 +7,7 @@ void Game::game_play(){
 
     cards_deck.SetupCards();
     cards_deck.shuffle();
+    //cards_deck.PrintDeck();
 
     for(int i = 0; i < MAX_PLAYERS; i++){
         cout << endl;
@@ -24,17 +25,17 @@ void Game::game_play(){
         for(int i = 0; i < MAX_PLAYERS; i++){
             print_players(players, i);
             Player* player1 = &players[i];
-            play_card(player1);
-            print_players(players, i);
+            play_card(player1, i);
+            
+            print_cards_on_table();
+            //print_players(players, i);
         }
     
-        for(int i = 0; i < cards_on_table.size(); i++){
-            cout << "Player " << players[i].name << ": ";
-            cout << cards_on_table[i].value << " " << cards_on_table[i].color << endl;
-        }
-
         checkwin();
         cards_on_table.clear();
+        flag = 0;
+        max = 0;
+        color = -1;
     } 
 
     for(int i = 0; i < players.size(); i++)
@@ -46,7 +47,7 @@ void Game::game_play(){
 
 
 
-void Game::play_card(Player* player){
+void Game::play_card(Player* player, int i){
     int index;
 
     while (true)
@@ -57,15 +58,21 @@ void Game::play_card(Player* player){
             std::cerr << "Input Failure";
             break;
         }     
+        
         if (index <= 0 || index > player->hand.size())
             std::cout << "Invalid index!\n";
 
-        //else if (!can_play_card(player->cards[index - 1], top_card))
-        //    std::cout << "Can not play " << player->cards[index - 1] << "!\n";
-        else
+        else if (!check_color(player, index) && i!=0)
+            std::cout << "Can't play " << endl;
+        else{
+            if(color == -1 )
+                color_round(player, index);
             break;
+        }
     }
 
+    cout << "Max: " << max << endl;
+    cout << "Color: " << color << endl;
     //Card card = player->push_card(index - 1);
     cards_on_table.push_back(player->hand[index - 1]);
 
@@ -90,38 +97,71 @@ void Game::print_players(std::vector<Player> players, int i){
     //}
 }
 
-void Game::checkwin(){
-    //int max = max_element( cards_on_table.value begin(), cards_on_table.value.end());
-    //cout << "Max: " << max << endl;
-    int max = cards_on_table[0].value;
-    int color = cards_on_table[0].color;
-    int pos = 0;
-    cout<< "Size: " << cards_on_table.size() << endl;
+void Game::print_cards_on_table(){
+    cout << endl;
     for(int i = 0; i < cards_on_table.size(); i++){
+        cout << "Player " << players[i].name << ": ";
+        cout << cards_on_table[i].value << " " << cards_on_table[i].color << endl;
+    }
+}
 
+void Game::color_round(Player* player, int index){
+
+        if(player->hand[index-1].value == 15 || player->hand[index-1].value == 16 || player->hand[index-1].value == 17){
+            color = -2;
+            
+            //break;
+        }
+    //for(int i = 0; i < player->hand.size(); i++){
+        if(player->hand[index-1].color == red || player->hand[index-1].color== blue || player->hand[index-1].color == yellow || player->hand[index-1].color == black){  
+            color = player->hand[index-1].color;
+            max = player->hand[index-1].value;
+            //break;
+        }
+    //}
+
+
+}
+
+bool Game::check_color(Player* player, int index){
+  
+    //for( int i = 0; i < player->hand.size(); i++){
+       if ( player->hand[index-1].color != color  &&  player->hand[index-1].color != white ) 
+            for ( int i = 0; i < player->hand.size(); i++){
+                if ( player->hand[i].color == color)
+                    return false;
+            }
+
+   //}
+    return true;
+}
+
+void Game::checkwin(){
+
+    int pos = 0;
+
+    for(int i = 0; i < cards_on_table.size(); i++){
         if( cards_on_table[i].color == color){
-            if( max < cards_on_table[i].value){
+            if( max <= cards_on_table[i].value){
                 max = cards_on_table[i].value;
                 pos = i;
             }
         }
 
-        else if( cards_on_table[i].color == black){
-            if( max < cards_on_table[i].value){
-                max = cards_on_table[i].value;
+        else if( cards_on_table[i].color == black && flag == 0){
+                //cout << "Passei aqui" << endl;
                 pos = i;
-            }
         }
         
         else if( cards_on_table[i].color == white ){
-            if( cards_on_table[i].value == 14){
-               pos = pos;
-            }
+            if( cards_on_table[i].value == 14)
+                pos = pos;
 
             else if( cards_on_table[i].value == 15){
                 if( max < cards_on_table[i].value){
                     max = cards_on_table[i].value;
                     pos = i;
+                    flag = 1;
                 }
             }
 
@@ -129,6 +169,7 @@ void Game::checkwin(){
                 if( max < cards_on_table[i].value){
                     max = cards_on_table[i].value;
                     pos = i;
+                    flag = 1;
                 }
             }
 
@@ -136,31 +177,29 @@ void Game::checkwin(){
                 if( max < cards_on_table[i].value){
                     max = cards_on_table[i].value;
                     pos = i;
+                    flag = 1;
                 }
             }
         }
-
-
-        //if( max == cards_on_table[i].value ){
-        //    max
-        //    cout << "Player " << players[i].name << " wins!" << endl;
-        //    break;
-        //}
     }
     
 
-    cout << "Max: " << max << endl;
+    //cout << "Max: " << max << endl;
     cout << "Player " << players[pos].name<< " win"<<endl;
     
     players[pos].points += 1;
 
- 
+    cout<< "Pos: " << pos << endl;
     for(int i = 0; i < pos; i++){
         players.push_back(players[i]);
-        players.erase(players.begin());
+        //cout << "sdskf " << players[i].name << endl;
     }
-  
+    players.erase(players.begin(), players.begin() + pos);
 
+    cout << "Ordem: " << endl;
+    for (int i = 0; i < players.size(); i++)
+        cout << players[i].name << " ";
+    cout << endl;
 }
 
 void Game::final_winner(){
