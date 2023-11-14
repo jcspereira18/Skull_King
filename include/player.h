@@ -8,14 +8,16 @@ class Player{
     public:
         string name;
         vector<Card> hand;
-        
         int points = 0;
+        int score = 0;
+        int bet = 0;
 
-        Player(std::string name, std::vector<Card> hand);
-         
-        void set_name(std::string name);
-        void set_points(int points);
-
+        Player(string name, vector<Card> hand);
+        //Player(int bet);
+        void set_bet(int bet){
+            this->bet = bet;
+        }
+               
         Card pop_card(int index){
             Card popped_card = hand[index];
             hand.erase(hand.begin() + index);
@@ -26,7 +28,6 @@ class Player{
             Card pushed_card = hand[index];
             return pushed_card;
         }
-
 };
 
 #endif

@@ -7,9 +7,8 @@
 
 using namespace std;
 
-//#define MAX_PLAYERS 4
 #define MAX_PLAYERS 4
-#define ROUNDS 10
+#define ROUNDS 1
 
 class Game{
     private:
@@ -21,17 +20,19 @@ class Game{
         Deck cards_deck;
         vector<Player> players;
         Player* player1;
-
         vector<Card> cards_on_table;
 
      
         void game_play();  
-        void print_players(std::vector<Player> players, int);
+        void print_players(vector<Player> players, int i);
+        void bet_round();
+        void print_bet(vector<Player> players);
         void play_card(Player* player, int i);  
         void print_cards_on_table();
         void color_round(Player* player, int index);
         bool check_color(Player* player, int index);
         void checkwin();
+        void bet_points();
         void final_winner();        
 };
 #endif

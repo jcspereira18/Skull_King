@@ -8,11 +8,10 @@
 using namespace std;
 
 class Deck {
-    //private:
-    public:
+    private:
         vector<Card> cards;
-        //std::vector<Player> players;
         vector<Card> hand;
+    public:
        
        
         //Deck();
@@ -22,9 +21,7 @@ class Deck {
         void shuffle();
 
         vector<Card> DealCards(int n);
-        void PrintHand();
-        //void PrintDealCards();
-   
+        void PrintHand();   
 };
 
 

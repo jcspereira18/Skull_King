@@ -17,18 +17,20 @@ void Game::game_play(){
             std::cerr << "Input Failure";
 
         players.push_back(Player(player_name, cards_deck.DealCards(10)));
-        //cards_deck.PrintHand();
         print_players(players, i);
+
     }  
+
+    bet_round();
+
+    print_bet(players);
     
     for( int j= 0; j < ROUNDS; j++){
         for(int i = 0; i < MAX_PLAYERS; i++){
             print_players(players, i);
             Player* player1 = &players[i];
             play_card(player1, i);
-            
             print_cards_on_table();
-            //print_players(players, i);
         }
     
         checkwin();
@@ -37,15 +39,11 @@ void Game::game_play(){
         max = 0;
         color = -1;
     } 
-
-    for(int i = 0; i < players.size(); i++)
-        cout << "Player " << players[i].name << " points: " << players[i].points << endl;
     
+    bet_points();
     //the final winner
     final_winner();
 }
-
-
 
 void Game::play_card(Player* player, int i){
     int index;
@@ -71,30 +69,42 @@ void Game::play_card(Player* player, int i){
         }
     }
 
-    cout << "Max: " << max << endl;
-    cout << "Color: " << color << endl;
-    //Card card = player->push_card(index - 1);
+    //cout << "Max: " << max << endl;
+    //cout << "Color: " << color << endl;
+   
     cards_on_table.push_back(player->hand[index - 1]);
 
-    //cout << "Card: " << cards_on_table[0].value << " " << cards_on_table[0].color << endl;
-    
-    //cout << "Card: " << card.value << " " << card.color << endl;
     player->pop_card(index - 1);
-    
-    //std::cout << *player << " plays " << card << '\n';
+   
   
 }
 
+void Game::bet_round(){
+    cout << endl;
+    int bet;
+    for( int i = 0; i < MAX_PLAYERS; i++){
+        cout << "Enter your bet: ";
+        cin >> bet;
+        if (cin.fail())
+            cerr << "Input Failure";
+        else if (bet < 0 || bet > 10)
+            std::cout << "Invalid bet!\n";
+        
+        players[i].bet = bet;
+    }
+}
+
+void Game::print_bet(vector<Player> players){
+    for( int i = 0; i < MAX_PLAYERS; i++){
+        cout << "Player " << players[i].name << " bet: " << players[i].bet << endl;
+    }
+}
+
 void Game::print_players(std::vector<Player> players, int i){
-    //for(int i = 0; i < players.size(); i++){
-    
+   
         cout << endl;
         cout << "Player " << players[i].name << endl;
-    
-        //for(int j = 0; j < players[i].hand.size(); j++)
-        //    players[i].hand[j].PrintCard();
         cout << PrintCard2(players[i].hand) << endl;
-    //}
 }
 
 void Game::print_cards_on_table(){
@@ -107,32 +117,26 @@ void Game::print_cards_on_table(){
 
 void Game::color_round(Player* player, int index){
 
-        if(player->hand[index-1].value == 15 || player->hand[index-1].value == 16 || player->hand[index-1].value == 17){
-            color = -2;
-            
-            //break;
-        }
-    //for(int i = 0; i < player->hand.size(); i++){
-        if(player->hand[index-1].color == red || player->hand[index-1].color== blue || player->hand[index-1].color == yellow || player->hand[index-1].color == black){  
-            color = player->hand[index-1].color;
-            max = player->hand[index-1].value;
-            //break;
-        }
-    //}
+    if(player->hand[index-1].value == 15 || player->hand[index-1].value == 16 || player->hand[index-1].value == 17){
+        color = -2;
+    }
+    if(player->hand[index-1].color == red || player->hand[index-1].color== blue || player->hand[index-1].color == yellow || player->hand[index-1].color == black){  
+        color = player->hand[index-1].color;
+        max = player->hand[index-1].value;
+    }
 
 
 }
 
 bool Game::check_color(Player* player, int index){
   
-    //for( int i = 0; i < player->hand.size(); i++){
-       if ( player->hand[index-1].color != color  &&  player->hand[index-1].color != white ) 
-            for ( int i = 0; i < player->hand.size(); i++){
-                if ( player->hand[i].color == color)
-                    return false;
-            }
+    if ( player->hand[index-1].color != color  &&  player->hand[index-1].color != white ){
+        for ( int i = 0; i < player->hand.size(); i++){
+            if ( player->hand[i].color == color)
+                return false;
+        }
+    }
 
-   //}
     return true;
 }
 
@@ -147,11 +151,8 @@ void Game::checkwin(){
                 pos = i;
             }
         }
-
-        else if( cards_on_table[i].color == black && flag == 0){
-                //cout << "Passei aqui" << endl;
-                pos = i;
-        }
+        else if( cards_on_table[i].color == black && flag == 0)
+            pos = i;
         
         else if( cards_on_table[i].color == white ){
             if( cards_on_table[i].value == 14)
@@ -182,34 +183,50 @@ void Game::checkwin(){
             }
         }
     }
-    
-
-    //cout << "Max: " << max << endl;
     cout << "Player " << players[pos].name<< " win"<<endl;
-    
     players[pos].points += 1;
 
-    cout<< "Pos: " << pos << endl;
     for(int i = 0; i < pos; i++){
         players.push_back(players[i]);
         //cout << "sdskf " << players[i].name << endl;
     }
     players.erase(players.begin(), players.begin() + pos);
 
-    cout << "Ordem: " << endl;
-    for (int i = 0; i < players.size(); i++)
-        cout << players[i].name << " ";
-    cout << endl;
+    //cout << "Ordem: " << endl;
+    //for (int i = 0; i < players.size(); i++)
+    //    cout << players[i].name << " ";
+    //cout << endl;
+}
+
+void Game::bet_points(){
+    cout<< endl;
+    for(int i = 0; i < players.size(); i++){
+        cout << "Player " << players[i].name << " bet " << players[i].bet << " points: " << players[i].points << endl;
+        if( players[i].bet == players[i].points )
+            if( players[i].bet == 0 )
+                players[i].score = 100; 
+            else    
+                players[i].score = 20 * players[i].bet;
+           
+        else if( players[i].bet != players[i].points )
+            if( players[i].bet == 0 )
+                players[i].score = -100;
+            else           
+                players[i].score = -10 * abs(players[i].points-players[i].bet);
+    }
 }
 
 void Game::final_winner(){
-
-    int max = players[0].points;
+    cout << endl;
+    int max = players[0].score;
     int pos = 0;
     for(int i = 0; i < players.size(); i++){
-        if( max < players[i].points)
+        cout << "Player " << players[i].name << " points: " << players[i].score << endl;
+        if( max < players[i].score){
+            max = players[i].score;
             pos = i;
+        }
     }
 
-    cout << "The winner is Player " << players[pos].name << " with " << players[pos].points << " points"<< endl;
+    cout << "The winner is Player " << players[pos].name << " with " << players[pos].score << " points"<< endl;
 }

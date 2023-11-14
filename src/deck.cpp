@@ -52,7 +52,6 @@ void Deck::PrintDeck(){
 vector<Card> Deck::DealCards(int n){
 
     hand.clear();
-
     for (int j = 0; j < n; j++){
         hand.push_back(cards.back());
         cards.pop_back();
