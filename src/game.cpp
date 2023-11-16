@@ -43,7 +43,7 @@ void Game::game_play(){
     bet_points();
 
     //the final winner
-    final_winner();
+    final_winner(players);
 }
 
 void Game::play_card(Player* player, int i){
@@ -217,7 +217,7 @@ void Game::bet_points(){
     }
 }
 
-void Game::final_winner(){
+int Game::final_winner(vector<Player> players){
     cout << endl;
     int max = players[0].score;
     int pos = 0;
@@ -230,4 +230,7 @@ void Game::final_winner(){
     }
 
     cout << "The winner is Player " << players[pos].name << " with " << players[pos].score << " points"<< endl;
+
+    return pos;
+
 }

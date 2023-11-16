@@ -33,6 +33,6 @@ class Game{
         bool check_color(Player* player, int index);
         void checkwin();
         void bet_points();
-        void final_winner();        
+        int final_winner(vector<Player> players);        
 };
 #endif

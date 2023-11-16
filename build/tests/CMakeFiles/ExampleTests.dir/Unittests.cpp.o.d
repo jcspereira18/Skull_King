@@ -149,14 +149,27 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
+ /home/jcspereira/psw/Skull_King/tests/../include/game.h \
+ /home/jcspereira/psw/Skull_King/tests/../include/../include/deck.h \
+ /home/jcspereira/psw/Skull_King/tests/../include/../include/../include/card.h \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h \
+ /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/algorithmfwd.h \
+ /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/uniform_int_dist.h /usr/include/c++/11/ctime \
+ /home/jcspereira/psw/Skull_King/tests/../include/../include/../include/player.h \
+ /home/jcspereira/psw/Skull_King/tests/../include/../include/../include/../include/deck.h \
+ /home/jcspereira/psw/Skull_King/tests/../include/../include/card.h \
+ /home/jcspereira/psw/Skull_King/tests/../include/../include/player.h \
  /home/jcspereira/psw/Skull_King/googletest/googletest/include/gtest/gtest.h \
  /usr/include/c++/11/cstddef /usr/include/c++/11/limits \
- /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
  /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/tuple \
  /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/shared_ptr.h \
  /usr/include/c++/11/bits/shared_ptr_base.h \
@@ -177,7 +190,7 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: \
  /home/jcspereira/psw/Skull_King/googletest/googletest/include/gtest/internal/gtest-port.h \
  /usr/include/c++/11/ciso646 /usr/include/c++/11/stdlib.h \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/11/locale \
- /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
+ /usr/include/c++/11/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
