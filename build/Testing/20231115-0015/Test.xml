@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20231115-0015-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.22.1"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="LAPTOP-M1B52RIK"
+	OSRelease="5.15.90.1-microsoft-standard-WSL2"
+	OSVersion="#1 SMP Fri Jan 27 02:56:13 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="23"
+	ModelID="24"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="1024"
+	TotalPhysicalMemory="3381"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2096"
+	>
+	<Testing>
+		<StartDateTime>Nov 15 01:51 WET</StartDateTime>
+		<StartTestTime>1700013110</StartTestTime>
+		<TestList>
+			<Test>./tests/ExampleTests</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>ExampleTests</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/ExampleTests</FullName>
+			<FullCommandLine>/home/jcspereira/psw/Skull_King/build/tests/ExampleTests</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>SEGFAULT</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>0</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.035715</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/jcspereira/psw/Skull_King/build/tests/ExampleTests</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJxdjc0KwjAQhO95ij3qoQ0+gEcREXqoiodSSgxrjOaP/KiPb2NLqQ4sDDsfM3UyRhoBmkmzWMLVWw30ZjXSOw8OPUrPqAsvengkpbp9z1JhrVAYMcS5DZ5TkV2Xu0rOSbOe1EI9Dq0gM8PQ6EOSEUvSFJNa2Cp7YWrI0Tylt0aj6VmMRXJ/8Lxz82baKTz2j0AaqE8VfNX+JOV5V5F8H4RyVMg=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Nov 15 01:51 WET</EndDateTime>
+		<EndTestTime>1700013110</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

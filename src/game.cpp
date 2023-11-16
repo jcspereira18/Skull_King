@@ -41,6 +41,7 @@ void Game::game_play(){
     } 
     
     bet_points();
+
     //the final winner
     final_winner();
 }
