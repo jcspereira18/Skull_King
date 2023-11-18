@@ -163,6 +163,7 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: \
  /home/jcspereira/psw/Skull_King/tests/../include/../include/../include/../include/deck.h \
  /home/jcspereira/psw/Skull_King/tests/../include/../include/card.h \
  /home/jcspereira/psw/Skull_King/tests/../include/../include/player.h \
+ /home/jcspereira/psw/Skull_King/tests/../include/card.h \
  /home/jcspereira/psw/Skull_King/googletest/googletest/include/gtest/gtest.h \
  /usr/include/c++/11/cstddef /usr/include/c++/11/limits \
  /usr/include/c++/11/memory \

@@ -33,7 +33,7 @@ void Game::game_play(){
             print_cards_on_table();
         }
     
-        checkwin();
+        checkwin(players, cards_on_table, color);
         cards_on_table.clear();
         flag = 0;
         max = 0;
@@ -141,43 +141,46 @@ bool Game::check_color(Player* player, int index){
     return true;
 }
 
-void Game::checkwin(){
+int Game::checkwin(vector<Player> players, vector <Card> cards, int color){
 
     int pos = 0;
 
-    for(int i = 0; i < cards_on_table.size(); i++){
-        if( cards_on_table[i].color == color){
-            if( max <= cards_on_table[i].value){
-                max = cards_on_table[i].value;
+    for(int i = 0; i < cards.size(); i++){
+        if( cards[i].color == color){
+            cout << "Color " << cards[i].color << endl;
+            if( max <= cards[i].value){
+                max = cards[i].value;
                 pos = i;
+                cout << "Max " << max << endl;
+                cout << "Pos " << pos << endl;
             }
         }
-        else if( cards_on_table[i].color == black && flag == 0)
+        else if( cards[i].color == black && flag == 0)
             pos = i;
         
-        else if( cards_on_table[i].color == white ){
-            if( cards_on_table[i].value == 14)
+        else if( cards[i].color == white ){
+            if( cards[i].value == 14)
                 pos = pos;
 
-            else if( cards_on_table[i].value == 15){
-                if( max < cards_on_table[i].value){
-                    max = cards_on_table[i].value;
+            else if( cards[i].value == 15){
+                if( max < cards[i].value){
+                    max = cards[i].value;
                     pos = i;
                     flag = 1;
                 }
             }
 
-            else if( cards_on_table[i].value == 16){
-                if( max < cards_on_table[i].value){
-                    max = cards_on_table[i].value;
+            else if( cards[i].value == 16){
+                if( max < cards[i].value){
+                    max = cards[i].value;
                     pos = i;
                     flag = 1;
                 }
             }
 
-            else if ( cards_on_table[i].value == 17){
-                if( max < cards_on_table[i].value){
-                    max = cards_on_table[i].value;
+            else if ( cards[i].value == 17){
+                if( max < cards[i].value){
+                    max = cards[i].value;
                     pos = i;
                     flag = 1;
                 }
@@ -197,6 +200,7 @@ void Game::checkwin(){
     //for (int i = 0; i < players.size(); i++)
     //    cout << players[i].name << " ";
     //cout << endl;
+    return pos;
 }
 
 void Game::bet_points(){

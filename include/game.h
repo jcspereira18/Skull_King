@@ -31,7 +31,7 @@ class Game{
         void print_cards_on_table();
         void color_round(Player* player, int index);
         bool check_color(Player* player, int index);
-        void checkwin();
+        int checkwin(vector<Player> players, vector <Card> cards, int color);
         void bet_points();
         int final_winner(vector<Player> players);        
 };
