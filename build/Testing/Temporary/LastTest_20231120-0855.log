@@ -1,3 +1,47 @@
-Start testing: Nov 20 15:35 WET
+Start testing: Nov 20 15:42 WET
 ----------------------------------------------------------
-End testing: Nov 20 15:35 WET
+1/1 Testing: ExampleTests
+1/1 Test: ExampleTests
+Command: "/home/jcspereira/psw/Skull_King/build/tests/ExampleTests"
+Directory: /home/jcspereira/psw/Skull_King/build/tests
+"ExampleTests" start time: Nov 20 15:42 WET
+Output:
+----------------------------------------------------------
+Running main() from /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from Tests_Win_player
+[ RUN      ] Tests_Win_player.WIN
+
+Player player points: 100
+Player player points: -20
+Player player points: -10
+Player player points: 40
+The winner is Player player with 100 points
+[       OK ] Tests_Win_player.WIN (0 ms)
+[----------] 1 test from Tests_Win_player (0 ms total)
+
+[----------] 1 test from Tests_cards
+[ RUN      ] Tests_cards.cards
+CARD
+Test red cards
+Test blue cards
+Test one black card
+Test pirate and escape cards
+Test mermaid card
+Test Skull King card
+[       OK ] Tests_cards.cards (0 ms)
+[----------] 1 test from Tests_cards (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 2 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ExampleTests" end time: Nov 20 15:42 WET
+"ExampleTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 20 15:42 WET

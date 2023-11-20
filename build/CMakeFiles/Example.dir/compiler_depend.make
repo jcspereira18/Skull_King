@@ -570,9 +570,7 @@ CMakeFiles/Example.dir/src/deck.cpp.o: ../src/deck.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/ctime \
-  ../include/player.h \
-  ../include/deck.h
+  /usr/include/c++/11/ctime
 
 CMakeFiles/Example.dir/src/game.cpp.o: ../src/game.cpp \
   /usr/include/stdc-predef.h \
@@ -769,9 +767,7 @@ CMakeFiles/Example.dir/src/game.cpp.o: ../src/game.cpp \
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/ctime \
   ../include/player.h \
-  ../include/deck.h \
-  ../include/card.h \
-  ../include/player.h
+  ../include/deck.h
 
 CMakeFiles/Example.dir/src/player.cpp.o: ../src/player.cpp \
   /usr/include/stdc-predef.h \
@@ -966,8 +962,7 @@ CMakeFiles/Example.dir/src/player.cpp.o: ../src/player.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/ctime \
-  ../include/player.h
+  /usr/include/c++/11/ctime
 
 
 ../src/player.cpp:

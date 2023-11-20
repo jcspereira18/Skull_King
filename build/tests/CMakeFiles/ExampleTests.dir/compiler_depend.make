@@ -199,8 +199,6 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
   ../include/player.h \
   ../include/deck.h \
   ../include/card.h \
-  ../include/player.h \
-  ../include/card.h \
   _deps/googletest-src/googletest/include/gtest/gtest.h \
   /usr/include/c++/11/cstddef \
   /usr/include/c++/11/limits \
