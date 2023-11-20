@@ -13,10 +13,6 @@ class Player{
         int bet = 0;
 
         Player(string name, vector<Card> hand);
-        //Player(int bet);
-        void set_bet(int bet){
-            this->bet = bet;
-        }
                
         Card pop_card(int index){
             Card popped_card = hand[index];

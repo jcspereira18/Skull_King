@@ -17,7 +17,7 @@ Card c;
 //   
 //};
 
-TEST(ExampleTests, WIN){
+TEST(Tests_Win_player, WIN){
 
     g.cards_deck.SetupCards();
     g.cards_deck.shuffle();
@@ -34,42 +34,35 @@ TEST(ExampleTests, WIN){
 
     EXPECT_EQ(
         0,
-        g.final_winner(p)
+        g.final_winner(p)    
     );
 }
 
-TEST(ExampleTests, cards){
+TEST(Tests_cards, cards){
     
     cout << "CARD" << endl;
     vector <Card> card_test;
-
-   int max = 0;
-
-    g.cards_deck.SetupCards();
-    g.cards_deck.shuffle();
-
-    vector<Player> p;
-    for (int i = 0; i < 4; i++)
-        p.push_back( Player("player", g.cards_deck.DealCards(10)) );
-    
+    int check_color;   
+  
     for (int i = 0; i < 4; i++)
         card_test.push_back(Card());
 
-    card_test[0].color = red;
-    card_test[0].value = 7;
-    card_test[1].color = red;
-    card_test[1].value = 1;
-    card_test[2].color = red;
-    card_test[2].value = 2;
-    card_test[3].color = red;
-    card_test[3].value = 3;
-    
-    int check_color = card_test[0].color;
+   card_test[0].color = red;
+   card_test[0].value = 7;
+   card_test[1].color = red;
+   card_test[1].value = 1;
+   card_test[2].color = red;
+   card_test[2].value = 2;
+   card_test[3].color = red;
+   card_test[3].value = 3;
+   
+   check_color = card_test[0].color;
     
     //Red cards
+    cout << "Test red cards" << endl;
     EXPECT_EQ(
         0,
-        g.checkwin(p, card_test, check_color)
+        g.checkwin(card_test, check_color)
     );
 
     card_test[0].color = blue;  
@@ -82,9 +75,10 @@ TEST(ExampleTests, cards){
     check_color = card_test[0].color;
     
     //Blue cards
+    cout << "Test blue cards" << endl;
     EXPECT_EQ(
         1,
-        g.checkwin(p, card_test, check_color)
+        g.checkwin(card_test, check_color)
     );
 
     card_test[0].color = yellow;
@@ -95,10 +89,58 @@ TEST(ExampleTests, cards){
     card_test[2].value = 2;
     check_color = card_test[0].color;
 
+    cout << "Test one black card" << endl;
     EXPECT_EQ(
         2,
-        g.checkwin(p, card_test, check_color)
+        g.checkwin(card_test, check_color)
     );
+
+    card_test[0].color = white;
+    card_test[0].value = 16; //pirata
+    card_test[1].color = white;
+    card_test[1].value = 14; //bandeira
+    card_test[2].color = black;
+    card_test[2].value = 2;
+    check_color = -1;
+
+    cout << "Test pirate and escape cards" << endl;
+    EXPECT_EQ(
+        0,
+        g.checkwin(card_test, check_color)
+    );
+
+    
+    card_test[0].color = blue;
+    card_test[0].value = 4;
+    card_test[1].color = blue;
+    card_test[1].value = 10;
+    card_test[2].color = white;
+    card_test[2].value = 15; //sereia
+    check_color = card_test[0].color;
+
+    cout << "Test mermaid card" << endl;
+    EXPECT_EQ(
+        2,
+        g.checkwin(card_test, check_color)
+    );
+
+
+    card_test[0].color = red;
+    card_test[0].value = 4;
+    card_test[1].color = black;
+    card_test[1].value = 2;
+    card_test[2].color = red;
+    card_test[2].value = 10;
+    card_test[3].color = white;
+    card_test[3].value = 17; //Skull King
+    check_color = card_test[0].color;
+
+    cout << "Test Skull King card" << endl;
+    EXPECT_EQ(
+        3,
+        g.checkwin(card_test, check_color)
+    );
+    
 
 }
 

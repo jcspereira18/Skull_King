@@ -201,7 +201,7 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
   ../include/card.h \
   ../include/player.h \
   ../include/card.h \
-  ../googletest/googletest/include/gtest/gtest.h \
+  _deps/googletest-src/googletest/include/gtest/gtest.h \
   /usr/include/c++/11/cstddef \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/memory \
@@ -223,17 +223,11 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
   /usr/include/c++/11/bits/atomic_base.h \
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/backward/auto_ptr.h \
-  /usr/include/c++/11/set \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/bits/stl_set.h \
-  /usr/include/c++/11/bits/stl_multiset.h \
-  /usr/include/c++/11/bits/erase_if.h \
+  _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
+  _deps/googletest-src/googletest/include/gtest/gtest-message.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
-  ../googletest/googletest/include/gtest/gtest-assertion-result.h \
-  ../googletest/googletest/include/gtest/gtest-message.h \
-  ../googletest/googletest/include/gtest/internal/gtest-port.h \
-  /usr/include/c++/11/ciso646 \
+  _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
   /usr/include/c++/11/stdlib.h \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -264,8 +258,8 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
   /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  ../googletest/googletest/include/gtest/internal/custom/gtest-port.h \
-  ../googletest/googletest/include/gtest/internal/gtest-port-arch.h \
+  _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
+  _deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -282,14 +276,14 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
   /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/unique_lock.h \
   /usr/include/c++/11/mutex \
-  ../googletest/googletest/include/gtest/gtest-death-test.h \
-  ../googletest/googletest/include/gtest/internal/gtest-death-test-internal.h \
-  ../googletest/googletest/include/gtest/gtest-matchers.h \
+  _deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
+  _deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
+  _deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
   /usr/include/c++/11/atomic \
+  _deps/googletest-src/googletest/include/gtest/gtest-printers.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
-  ../googletest/googletest/include/gtest/gtest-printers.h \
-  ../googletest/googletest/include/gtest/internal/gtest-internal.h \
+  _deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
   /usr/include/x86_64-linux-gnu/sys/wait.h \
   /usr/include/signal.h \
   /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -314,48 +308,65 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
   /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
   /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/bits/stl_multimap.h \
-  ../googletest/googletest/include/gtest/internal/gtest-filepath.h \
-  ../googletest/googletest/include/gtest/internal/gtest-string.h \
-  ../googletest/googletest/include/gtest/internal/gtest-type-util.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/set \
+  /usr/include/c++/11/bits/stl_set.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
+  _deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
+  _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
+  _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /usr/include/c++/11/cxxabi.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h \
-  ../googletest/googletest/include/gtest/internal/custom/gtest-printers.h \
-  ../googletest/googletest/include/gtest/gtest-param-test.h \
+  _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
+  _deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
   /usr/include/c++/11/iterator \
   /usr/include/c++/11/bits/stream_iterator.h \
-  ../googletest/googletest/include/gtest/internal/gtest-param-util.h \
+  _deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
-  ../googletest/googletest/include/gtest/gtest-test-part.h \
-  ../googletest/googletest/include/gtest/gtest-typed-test.h \
-  ../googletest/googletest/include/gtest/gtest_pred_impl.h \
-  ../googletest/googletest/include/gtest/gtest_prod.h
+  _deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
+  _deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
+  _deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
+  _deps/googletest-src/googletest/include/gtest/gtest_prod.h
 
 
-../googletest/googletest/include/gtest/gtest-typed-test.h:
+_deps/googletest-src/googletest/include/gtest/gtest_prod.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-test-part.h:
 
 /usr/include/assert.h:
 
 /usr/include/c++/11/cassert:
 
-../googletest/googletest/include/gtest/internal/gtest-param-util.h:
+_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h:
 
-/usr/include/c++/11/bits/stream_iterator.h:
+_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h:
 
-../googletest/googletest/include/gtest/internal/gtest-string.h:
+_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h:
 
-../googletest/googletest/include/gtest/internal/gtest-filepath.h:
+_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
+
+/usr/include/c++/11/bits/stl_multiset.h:
+
+/usr/include/c++/11/set:
 
 /usr/include/c++/11/bits/stl_multimap.h:
 
-../googletest/googletest/include/gtest/gtest-param-test.h:
-
 /usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/bits/stl_tree.h:
 
 /usr/include/c++/11/map:
 
@@ -389,15 +400,19 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
 
+/usr/include/c++/11/bits/quoted_string.h:
+
 /usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
-../googletest/googletest/include/gtest/gtest-printers.h:
+_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/11/atomic:
 
-../googletest/googletest/include/gtest/gtest-matchers.h:
+/usr/include/c++/11/bits/stream_iterator.h:
 
-../googletest/googletest/include/gtest/gtest-death-test.h:
+_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h:
 
 /usr/include/c++/11/mutex:
 
@@ -417,10 +432,6 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
-
 /usr/include/c++/11/bits/locale_classes.h:
 
 /usr/include/linux/stat.h:
@@ -439,13 +450,11 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-../googletest/googletest/include/gtest/internal/custom/gtest-printers.h:
-
 /usr/include/c++/11/bits/allocated_ptr.h:
 
-../googletest/googletest/include/gtest/gtest-test-part.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/include/c++/11/ext/atomicity.h:
 
@@ -469,11 +478,7 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
 
-../googletest/googletest/include/gtest/internal/gtest-internal.h:
-
 /usr/include/c++/11/bits/ios_base.h:
-
-/usr/include/c++/11/set:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -491,9 +496,11 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/c++/11/bits/localefwd.h:
 
+_deps/googletest-src/googletest/include/gtest/gtest-matchers.h:
+
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
-../googletest/googletest/include/gtest/internal/gtest-death-test-internal.h:
+/usr/include/c++/11/iomanip:
 
 /usr/include/c++/11/cctype:
 
@@ -503,9 +510,15 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
+_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
+
 /usr/include/c++/11/bits/allocator.h:
 
 /usr/include/c++/11/bits/char_traits.h:
+
+/usr/include/x86_64-linux-gnu/sys/wait.h:
+
+/usr/include/asm-generic/errno-base.h:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
@@ -514,8 +527,6 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
 /usr/include/wchar.h:
-
-../googletest/googletest/include/gtest/internal/gtest-port-arch.h:
 
 /usr/include/c++/11/exception:
 
@@ -527,15 +538,11 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
-../googletest/googletest/include/gtest/gtest_prod.h:
-
 /usr/include/c++/11/bits/stringfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
 /usr/include/c++/11/cwchar:
 
@@ -559,7 +566,13 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 ../include/card.h:
 
+/usr/include/c++/11/string:
+
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-message.h:
 
 /usr/include/c++/11/bits/exception_ptr.h:
 
@@ -579,6 +592,10 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/c++/11/algorithm:
 
+/usr/include/c++/11/bits/stl_set.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
 /usr/include/c++/11/ext/type_traits.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
@@ -589,13 +606,13 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/c++/11/bits/exception_defines.h:
 
-/usr/include/c++/11/vector:
-
 /usr/include/c++/11/bits/align.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
 /usr/include/c++/11/clocale:
+
+_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
 
 /usr/include/c++/11/bits/ostream.tcc:
 
@@ -617,11 +634,7 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/c++/11/tuple:
 
-/usr/include/c++/11/bits/stl_tree.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
-
-../googletest/googletest/include/gtest/gtest_pred_impl.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
 
@@ -687,6 +700,8 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
@@ -696,6 +711,8 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/11/bits/alloc_traits.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -723,8 +740,6 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
-../googletest/googletest/include/gtest/internal/gtest-type-util.h:
-
 /usr/include/c++/11/backward/auto_ptr.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
@@ -746,6 +761,10 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/usr/include/c++/11/vector:
+
+_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
@@ -795,6 +814,14 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
+/usr/include/c++/11/bits/erase_if.h:
+
+/usr/include/stdint.h:
+
+/usr/include/c++/11/bits/ptr_traits.h:
+
+/usr/include/endian.h:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
@@ -805,6 +832,8 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/c++/11/bits/shared_ptr.h:
 
+_deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
+
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -812,12 +841,6 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 /usr/include/alloca.h:
 
 /usr/include/c++/11/cstdio:
-
-/usr/include/x86_64-linux-gnu/sys/wait.h:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/c++/11/ciso646:
 
 /usr/include/stdio.h:
 
@@ -828,8 +851,6 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 /usr/include/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/signum-arch.h:
-
-../googletest/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
@@ -857,8 +878,6 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
-/usr/include/c++/11/stdexcept:
-
 /usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
@@ -868,10 +887,6 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/c++/11/bits/locale_facets.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
-
-/usr/include/c++/11/cwctype:
 
 /usr/include/x86_64-linux-gnu/asm/types.h:
 
@@ -907,6 +922,10 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/c++/11/bits/stl_heap.h:
 
+/usr/include/c++/11/stdexcept:
+
+_deps/googletest-src/googletest/include/gtest/gtest.h:
+
 /usr/include/c++/11/limits:
 
 /usr/include/c++/11/memory:
@@ -925,31 +944,7 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
-
-/usr/include/c++/11/bits/stl_set.h:
-
-/usr/include/c++/11/bits/stl_multiset.h:
-
-/usr/include/stdint.h:
-
-/usr/include/c++/11/bits/ptr_traits.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/11/bits/erase_if.h:
-
 /usr/include/c++/11/sstream:
-
-/usr/include/c++/11/string:
-
-../googletest/googletest/include/gtest/gtest-assertion-result.h:
-
-../googletest/googletest/include/gtest/gtest.h:
-
-../googletest/googletest/include/gtest/gtest-message.h:
-
-../googletest/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/include/c++/11/stdlib.h:
 
@@ -987,6 +982,14 @@ tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp \
 
 /usr/include/linux/posix_types.h:
 
+/usr/include/c++/11/cwctype:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/jcspereira/psw/Skull_King/googletest/googletest/include -isystem /home/jcspereira/psw/Skull_King/googletest/googletest
+CXX_INCLUDES = -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest/include -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = -g -fPIE -std=gnu++14
 

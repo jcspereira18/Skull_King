@@ -4,6 +4,7 @@
 void Game::game_play(){
 
     std::string player_name;
+    int win_pos;
 
     cards_deck.SetupCards();
     cards_deck.shuffle();
@@ -33,13 +34,13 @@ void Game::game_play(){
             print_cards_on_table();
         }
     
-        checkwin(players, cards_on_table, color);
+        win_pos=checkwin(cards_on_table, color);
+        order_players(win_pos);
+
         cards_on_table.clear();
-        flag = 0;
-        max = 0;
         color = -1;
     } 
-    
+
     bet_points();
 
     //the final winner
@@ -141,18 +142,18 @@ bool Game::check_color(Player* player, int index){
     return true;
 }
 
-int Game::checkwin(vector<Player> players, vector <Card> cards, int color){
+int Game::checkwin(vector <Card> cards, int color){
 
     int pos = 0;
 
     for(int i = 0; i < cards.size(); i++){
         if( cards[i].color == color){
-            cout << "Color " << cards[i].color << endl;
+            //cout << "Color " << cards[i].color << endl;
             if( max <= cards[i].value){
                 max = cards[i].value;
                 pos = i;
-                cout << "Max " << max << endl;
-                cout << "Pos " << pos << endl;
+                //cout << "Max " << max << endl;
+                //cout << "Pos " << pos << endl;
             }
         }
         else if( cards[i].color == black && flag == 0)
@@ -187,20 +188,26 @@ int Game::checkwin(vector<Player> players, vector <Card> cards, int color){
             }
         }
     }
-    cout << "Player " << players[pos].name<< " win"<<endl;
-    players[pos].points += 1;
 
-    for(int i = 0; i < pos; i++){
+    flag = 0;
+    max = 0;
+
+    return pos;
+}
+
+void Game::order_players(int win_pos){
+    
+    players[win_pos].points += 1;
+
+    for(int i = 0; i < win_pos; i++){
         players.push_back(players[i]);
-        //cout << "sdskf " << players[i].name << endl;
     }
-    players.erase(players.begin(), players.begin() + pos);
+    players.erase(players.begin(), players.begin() + win_pos);
 
     //cout << "Ordem: " << endl;
     //for (int i = 0; i < players.size(); i++)
     //    cout << players[i].name << " ";
     //cout << endl;
-    return pos;
 }
 
 void Game::bet_points(){

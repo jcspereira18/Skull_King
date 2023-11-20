@@ -24,39 +24,11 @@
 	ProcessorClockFrequency="2096"
 	>
 	<Testing>
-		<StartDateTime>Nov 18 01:16 WET</StartDateTime>
-		<StartTestTime>1700270204</StartTestTime>
-		<TestList>
-			<Test>./tests/ExampleTests</Test>
-		</TestList>
-		<Test Status="passed">
-			<Name>ExampleTests</Name>
-			<Path>./tests</Path>
-			<FullName>./tests/ExampleTests</FullName>
-			<FullCommandLine>/home/jcspereira/psw/Skull_King/build/tests/ExampleTests</FullCommandLine>
-			<Results>
-				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.00414663</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="numeric/double" name="Processors">
-					<Value>1</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Completion Status">
-					<Value>Completed</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Command Line">
-					<Value>/home/jcspereira/psw/Skull_King/build/tests/ExampleTests</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Environment">
-					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
-				</NamedMeasurement>
-				<Measurement>
-					<Value encoding="base64" compression="gzip">eJyNUstOwzAQvPsr9tge8gQJCYlD1VYIVZQqLeJQVZVJl9Tg2JHtkPL3xEkIJBDUvcx6Z7wPe6NcCCYSSCkTozG8KJmCd5Qpeq+xzlAhU9TLdOGt33LO94tS6yVSJhwNavPT1Sr2EuvtbS43jsn2prUdRE2hEKxG15WC6gA6ZwZdsnVa28Etl8+U1zyKd6akSFGUWjROnvXEnaTzE00zjhsbIVuIHpdQ2a7DuE93S0JWnH6ggqwByYTR1xD4/gDjhINMMMRc+mRzRCiYEGWUaejKCmaOtmKjLzuu7WHxR8cw8iHV43/Giqk6aDKdRDMylVwq8Mk9PcEVWUld+l+xPvZ7Eg0TtGizBBdVmu/g0LWwxd+K4QGr3tsRz/rgWg1GGsrH5LwVMkiVc5CF6G7o4GaCosLtFipnWE3W6/nMvn9z0SWfhHcNSg==</Value>
-				</Measurement>
-			</Results>
-		</Test>
-		<EndDateTime>Nov 18 01:16 WET</EndDateTime>
-		<EndTestTime>1700270204</EndTestTime>
+		<StartDateTime>Nov 18 17:51 WET</StartDateTime>
+		<StartTestTime>1700329862</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 18 17:51 WET</EndDateTime>
+		<EndTestTime>1700329862</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

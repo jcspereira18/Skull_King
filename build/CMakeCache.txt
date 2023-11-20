@@ -283,6 +283,26 @@ Example_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Example_SOURCE_DIR:STATIC=/home/jcspereira/psw/Skull_King
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/home/jcspereira/psw/Skull_King/build/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//When not empty, overrides where to find pre-populated content
+// for googletest
+FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of googletest
+FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
+
 //Use Abseil and RE2. Requires Abseil and RE2 to be separately
 // added to the build.
 GTEST_HAS_ABSL:BOOL=OFF
@@ -292,34 +312,40 @@ GTEST_HAS_ABSL:BOOL=OFF
 INSTALL_GTEST:BOOL=ON
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/googletest/googlemock
+gmock_BINARY_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/_deps/googletest-build/googlemock
 
 //Value Computed by CMake
 gmock_IS_TOP_LEVEL:STATIC=OFF
 
+//Dependencies for the target
+gmock_LIB_DEPENDS:STATIC=general;gtest;
+
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=/home/jcspereira/psw/Skull_King/googletest/googlemock
+gmock_SOURCE_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
 
+//Dependencies for the target
+gmock_main_LIB_DEPENDS:STATIC=general;gmock;
+
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/googletest
+googletest-distribution_BINARY_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/_deps/googletest-build
 
 //Value Computed by CMake
 googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=/home/jcspereira/psw/Skull_King/googletest
+googletest-distribution_SOURCE_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/_deps/googletest-src
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/googletest/googletest
+gtest_BINARY_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/_deps/googletest-build/googletest
 
 //Value Computed by CMake
 gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/home/jcspereira/psw/Skull_King/googletest/googletest
+gtest_SOURCE_DIR:STATIC=/home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -332,10 +358,13 @@ gtest_disable_pthreads:BOOL=OFF
 
 //Use shared (DLL) run-time lib even when Google Test is built
 // as static lib.
-gtest_force_shared_crt:BOOL=OFF
+gtest_force_shared_crt:BOOL=ON
 
 //Build gtest with internal symbols hidden in shared libraries.
 gtest_hide_internal_symbols:BOOL=OFF
+
+//Dependencies for the target
+gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 
 ########################
@@ -519,6 +548,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.12()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.12()]
 //Details about finding Threads
@@ -530,8 +561,13 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.10
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=b91b4035ecb3bb3f5760d35922531bcd
+//Path to a program.
+_Python_EXECUTABLE:INTERNAL=/usr/bin/python3.10
+//Python Properties
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=61380851b1f49cd20124cec6c9ca8095
 cmake_package_name:INTERNAL=GTest
-generated_dir:INTERNAL=/home/jcspereira/psw/Skull_King/build/googletest/googletest/generated
+generated_dir:INTERNAL=/home/jcspereira/psw/Skull_King/build/_deps/googletest-build/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples

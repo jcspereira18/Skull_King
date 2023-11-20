@@ -1,2 +1,2 @@
-ExampleTests 12 0.00495161
+ExampleTests 50 0.00640631
 ---

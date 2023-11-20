@@ -2,7 +2,6 @@
 #define DECK
 
 #include "../include/card.h"
-#include "../include/player.h"
 
 
 using namespace std;

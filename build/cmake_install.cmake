@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/jcspereira/psw/Skull_King/build/googletest/cmake_install.cmake")
+  include("/home/jcspereira/psw/Skull_King/build/_deps/googletest-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
