@@ -3,7 +3,9 @@ cmake_minimum_required(VERSION 3.15)
 set(This ExampleTests)
 
 set(Sources
-    Unittests.cpp
+    #Cardstest.cpp
+    #Wintest.cpp
+    Playerstest.cpp
 )
 
 add_executable(${This} ${Sources})

@@ -8,36 +8,6 @@
 Game g;
 Card c;
 
-//struct ExampleTests 
-//    : public ::testing::Test 
-//{
-//
-//    Card c;
-//
-//   
-//};
-
-TEST(Tests_Win_player, WIN){
-
-    g.cards_deck.SetupCards();
-    g.cards_deck.shuffle();
-
-    vector<Player> p;
-    for (int i = 0; i < 4; i++)
-        p.push_back( Player("player", g.cards_deck.DealCards(10)) );
-    
-
-    p[0].score = 100;
-    p[1].score = -20;  
-    p[2].score = -10;
-    p[3].score = 40;
-
-    EXPECT_EQ(
-        0,
-        g.final_winner(p)    
-    );
-}
-
 TEST(Tests_cards, cards){
     
     cout << "CARD" << endl;
@@ -140,8 +110,6 @@ TEST(Tests_cards, cards){
         3,
         g.checkwin(card_test, check_color)
     );
-    
-
 }
 
 //struct ExampleTests 

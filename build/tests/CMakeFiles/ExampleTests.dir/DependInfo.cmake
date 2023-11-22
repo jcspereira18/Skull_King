@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/jcspereira/psw/Skull_King/tests/Unittests.cpp" "tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o" "gcc" "tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o.d"
+  "/home/jcspereira/psw/Skull_King/tests/Playerstest.cpp" "tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o" "gcc" "tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o.d"
   )
 
 # Targets to which this target links.

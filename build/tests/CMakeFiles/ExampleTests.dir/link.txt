@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/ExampleTests.dir/Unittests.cpp.o -o ExampleTests  ../lib/libgtest_main.a ../libExample.a ../lib/libgtest.a 
+/usr/bin/g++ -g CMakeFiles/ExampleTests.dir/Playerstest.cpp.o -o ExampleTests  ../lib/libgtest_main.a ../libExample.a ../lib/libgtest.a 

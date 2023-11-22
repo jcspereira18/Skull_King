@@ -69,28 +69,28 @@ include tests/CMakeFiles/ExampleTests.dir/progress.make
 # Include the compile flags for this target's objects.
 include tests/CMakeFiles/ExampleTests.dir/flags.make
 
-tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: tests/CMakeFiles/ExampleTests.dir/flags.make
-tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: ../tests/Unittests.cpp
-tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o: tests/CMakeFiles/ExampleTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jcspereira/psw/Skull_King/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o"
-	cd /home/jcspereira/psw/Skull_King/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o -MF CMakeFiles/ExampleTests.dir/Unittests.cpp.o.d -o CMakeFiles/ExampleTests.dir/Unittests.cpp.o -c /home/jcspereira/psw/Skull_King/tests/Unittests.cpp
+tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o: tests/CMakeFiles/ExampleTests.dir/flags.make
+tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o: ../tests/Playerstest.cpp
+tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o: tests/CMakeFiles/ExampleTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jcspereira/psw/Skull_King/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o"
+	cd /home/jcspereira/psw/Skull_King/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o -MF CMakeFiles/ExampleTests.dir/Playerstest.cpp.o.d -o CMakeFiles/ExampleTests.dir/Playerstest.cpp.o -c /home/jcspereira/psw/Skull_King/tests/Playerstest.cpp
 
-tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ExampleTests.dir/Unittests.cpp.i"
-	cd /home/jcspereira/psw/Skull_King/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jcspereira/psw/Skull_King/tests/Unittests.cpp > CMakeFiles/ExampleTests.dir/Unittests.cpp.i
+tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ExampleTests.dir/Playerstest.cpp.i"
+	cd /home/jcspereira/psw/Skull_King/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jcspereira/psw/Skull_King/tests/Playerstest.cpp > CMakeFiles/ExampleTests.dir/Playerstest.cpp.i
 
-tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ExampleTests.dir/Unittests.cpp.s"
-	cd /home/jcspereira/psw/Skull_King/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jcspereira/psw/Skull_King/tests/Unittests.cpp -o CMakeFiles/ExampleTests.dir/Unittests.cpp.s
+tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ExampleTests.dir/Playerstest.cpp.s"
+	cd /home/jcspereira/psw/Skull_King/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jcspereira/psw/Skull_King/tests/Playerstest.cpp -o CMakeFiles/ExampleTests.dir/Playerstest.cpp.s
 
 # Object files for target ExampleTests
 ExampleTests_OBJECTS = \
-"CMakeFiles/ExampleTests.dir/Unittests.cpp.o"
+"CMakeFiles/ExampleTests.dir/Playerstest.cpp.o"
 
 # External object files for target ExampleTests
 ExampleTests_EXTERNAL_OBJECTS =
 
-tests/ExampleTests: tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o
+tests/ExampleTests: tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o
 tests/ExampleTests: tests/CMakeFiles/ExampleTests.dir/build.make
 tests/ExampleTests: lib/libgtest_main.a
 tests/ExampleTests: libExample.a

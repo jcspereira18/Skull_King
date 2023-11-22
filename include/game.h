@@ -2,19 +2,20 @@
 #define GAME
 
 #include "../include/deck.h"
-//#include "../include/card.h"
 #include "../include/player.h"
 
 using namespace std;
 
 #define MAX_PLAYERS 4
-#define ROUNDS 1
+#define ROUNDS 2
 
 class Game{
     private:
         int color = -1;
         int max = 0;
         int flag = 0;
+        int special_points = 0;
+        int mermaid = 0;
 
     public:
         
@@ -33,8 +34,8 @@ class Game{
         void color_round(Player* player, int index);
         bool check_color(Player* player, int index);
         int checkwin(vector <Card> cards, int color);
-        void order_players(int win_pos);
-        void bet_points();
+        vector<Player> order_players(int win_pos, vector<Player> players);
+        vector<Player> bet_points(vector<Player> players);
         int final_winner(vector<Player> players);        
 };
 #endif

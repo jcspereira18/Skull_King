@@ -33,15 +33,15 @@ void Game::game_play(){
             play_card(player1, i);
             print_cards_on_table();
         }
-    
+
         win_pos=checkwin(cards_on_table, color);
-        order_players(win_pos);
+        players = order_players(win_pos, players);
 
         cards_on_table.clear();
         color = -1;
     } 
 
-    bet_points();
+    players=bet_points(players);
 
     //the final winner
     final_winner(players);
@@ -126,8 +126,6 @@ void Game::color_round(Player* player, int index){
         color = player->hand[index-1].color;
         max = player->hand[index-1].value;
     }
-
-
 }
 
 bool Game::check_color(Player* player, int index){
@@ -138,14 +136,13 @@ bool Game::check_color(Player* player, int index){
                 return false;
         }
     }
-
     return true;
 }
 
 int Game::checkwin(vector <Card> cards, int color){
 
     int pos = 0;
-
+    //cout << "flag2 "<<flag << endl;
     for(int i = 0; i < cards.size(); i++){
         if( cards[i].color == color){
             //cout << "Color " << cards[i].color << endl;
@@ -167,6 +164,8 @@ int Game::checkwin(vector <Card> cards, int color){
                 if( max < cards[i].value){
                     max = cards[i].value;
                     pos = i;
+                    mermaid = i;
+                    special_points += 1;
                     flag = 1;
                 }
             }
@@ -175,6 +174,7 @@ int Game::checkwin(vector <Card> cards, int color){
                 if( max < cards[i].value){
                     max = cards[i].value;
                     pos = i;
+                    special_points += 2;
                     flag = 1;
                 }
             }
@@ -183,6 +183,7 @@ int Game::checkwin(vector <Card> cards, int color){
                 if( max < cards[i].value){
                     max = cards[i].value;
                     pos = i;
+                    special_points += 1;
                     flag = 1;
                 }
             }
@@ -191,26 +192,48 @@ int Game::checkwin(vector <Card> cards, int color){
 
     flag = 0;
     max = 0;
-
+    special_points = 0;
     return pos;
 }
 
-void Game::order_players(int win_pos){
-    
+vector<Player> Game::order_players(int win_pos, vector<Player> players){
+
     players[win_pos].points += 1;
+
+    cout << "Player " << players[win_pos].name<< " win"<<endl;
+    cout << "Points: " << players[win_pos].points << endl;
 
     for(int i = 0; i < win_pos; i++){
         players.push_back(players[i]);
     }
+
     players.erase(players.begin(), players.begin() + win_pos);
 
-    //cout << "Ordem: " << endl;
-    //for (int i = 0; i < players.size(); i++)
-    //    cout << players[i].name << " ";
-    //cout << endl;
+    return players;
+
+//    //int n_pirates = special_points - 1;
+////
+//    //if(special_points > 3)
+//    //    players[win_pos].points += 30;
+//  //
+//    //else 
+//        players[win_pos].points += 1;
+//
+//    cout << "Player " << players[win_pos].name<< " win"<<endl;
+//    cout << "Points: " << players[win_pos].points << endl;
+//
+//    for(int i = 0; i < win_pos; i++){
+//        players.push_back(players[i]);
+//    }
+//    players.erase(players.begin(), players.begin() + win_pos);
+//
+//    //cout << "Ordem: " << endl;
+//    //for (int i = 0; i < players.size(); i++)
+//    //    cout << players[i].name << " ";
+//    //cout << endl;
 }
 
-void Game::bet_points(){
+vector<Player> Game::bet_points(vector<Player> players){
     cout<< endl;
     for(int i = 0; i < players.size(); i++){
         cout << "Player " << players[i].name << " bet " << players[i].bet << " points: " << players[i].points << endl;
@@ -226,6 +249,7 @@ void Game::bet_points(){
             else           
                 players[i].score = -10 * abs(players[i].points-players[i].bet);
     }
+    return players;
 }
 
 int Game::final_winner(vector<Player> players){

@@ -185,29 +185,29 @@ ExampleTests/fast:
 	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/build
 .PHONY : ExampleTests/fast
 
-Unittests.o: Unittests.cpp.o
-.PHONY : Unittests.o
+Playerstest.o: Playerstest.cpp.o
+.PHONY : Playerstest.o
 
 # target to build an object file
-Unittests.cpp.o:
-	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.o
-.PHONY : Unittests.cpp.o
+Playerstest.cpp.o:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.o
+.PHONY : Playerstest.cpp.o
 
-Unittests.i: Unittests.cpp.i
-.PHONY : Unittests.i
+Playerstest.i: Playerstest.cpp.i
+.PHONY : Playerstest.i
 
 # target to preprocess a source file
-Unittests.cpp.i:
-	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.i
-.PHONY : Unittests.cpp.i
+Playerstest.cpp.i:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.i
+.PHONY : Playerstest.cpp.i
 
-Unittests.s: Unittests.cpp.s
-.PHONY : Unittests.s
+Playerstest.s: Playerstest.cpp.s
+.PHONY : Playerstest.s
 
 # target to generate assembly for a file
-Unittests.cpp.s:
-	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Unittests.cpp.s
-.PHONY : Unittests.cpp.s
+Playerstest.cpp.s:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.s
+.PHONY : Playerstest.cpp.s
 
 # Help Target
 help:
@@ -223,9 +223,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ExampleTests"
-	@echo "... Unittests.o"
-	@echo "... Unittests.i"
-	@echo "... Unittests.s"
+	@echo "... Playerstest.o"
+	@echo "... Playerstest.i"
+	@echo "... Playerstest.s"
 .PHONY : help
 
 
