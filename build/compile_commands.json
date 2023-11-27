@@ -46,7 +46,22 @@
 },
 {
   "directory": "/home/jcspereira/psw/Skull_King/build/tests",
+  "command": "/usr/bin/g++  -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest/include -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest -g -fPIE -std=gnu++14 -o CMakeFiles/ExampleTests.dir/Cardstest.cpp.o -c /home/jcspereira/psw/Skull_King/tests/Cardstest.cpp",
+  "file": "/home/jcspereira/psw/Skull_King/tests/Cardstest.cpp"
+},
+{
+  "directory": "/home/jcspereira/psw/Skull_King/build/tests",
+  "command": "/usr/bin/g++  -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest/include -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest -g -fPIE -std=gnu++14 -o CMakeFiles/ExampleTests.dir/Wintest.cpp.o -c /home/jcspereira/psw/Skull_King/tests/Wintest.cpp",
+  "file": "/home/jcspereira/psw/Skull_King/tests/Wintest.cpp"
+},
+{
+  "directory": "/home/jcspereira/psw/Skull_King/build/tests",
   "command": "/usr/bin/g++  -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest/include -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest -g -fPIE -std=gnu++14 -o CMakeFiles/ExampleTests.dir/Playerstest.cpp.o -c /home/jcspereira/psw/Skull_King/tests/Playerstest.cpp",
   "file": "/home/jcspereira/psw/Skull_King/tests/Playerstest.cpp"
+},
+{
+  "directory": "/home/jcspereira/psw/Skull_King/build/tests",
+  "command": "/usr/bin/g++  -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest/include -isystem /home/jcspereira/psw/Skull_King/build/_deps/googletest-src/googletest -g -fPIE -std=gnu++14 -o CMakeFiles/ExampleTests.dir/Scoretest.cpp.o -c /home/jcspereira/psw/Skull_King/tests/Scoretest.cpp",
+  "file": "/home/jcspereira/psw/Skull_King/tests/Scoretest.cpp"
 }
 ]

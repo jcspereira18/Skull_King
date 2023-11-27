@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20231127-0849-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.22.1"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="LAPTOP-M1B52RIK"
+	OSRelease="5.15.133.1-microsoft-standard-WSL2"
+	OSVersion="#1 SMP Thu Oct 5 21:02:42 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="23"
+	ModelID="24"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="1024"
+	TotalPhysicalMemory="3381"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2096"
+	>
+	<Testing>
+		<StartDateTime>Nov 27 16:43 WET</StartDateTime>
+		<StartTestTime>1701103390</StartTestTime>
+		<TestList>
+			<Test>./tests/ExampleTests</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>ExampleTests</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/ExampleTests</FullName>
+			<FullCommandLine>/home/jcspereira/psw/Skull_King/build/tests/ExampleTests</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.003999</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/jcspereira/psw/Skull_King/build/tests/ExampleTests</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNU11LwzAUfe+vuI/uYf3angQfREFEUJmKD2OMNL2u0TQJSer035uPObutBQOlueec+9HTZNEJwcQGWsLE2QTetGwha2SL2Ts1CjUyTTJlttnTR8f5+s5ps6pjvM7WNSqTbaTccLRo7NRo2guzEPrd2tdOKU2WF/u1gsWu8Ry8xsTOsxCA6Zh7p8lyul8ruOGyIjwKUHwyLUWLwonRTjt1JC6iLhR99vXXlOjaJEtYvNxDWKs+kUb66nJxnXgYNNYQsRBWvMN+LAU6jNCPAEZMOassAhE1oKFEHSS0qJ0NdU8eDAVv6DDo6xxkLePc8HA3NDuc5dCayb9siFqw0hI+SQ5Tyv7/iDmKk2/UQ95FJn29vU/8kzyGGNTuJZmw5hyKPB9hpuUoU4wx8zx5bhC2TAiHMgOHsi2zje+40w+59jf13rTRT1P8aIyZ73yEFQNYGbATsELr5HtnTop7vhzli8DnPf6kwS914uxs0Ns0TYOdOpzqN7BuH86M7KzqLGyJcVwrP919MExQBOau3xdFdMcoiBuX2khe++wiL+dQfYfL+wOGbW6c====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Nov 27 16:43 WET</EndDateTime>
+		<EndTestTime>1701103390</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

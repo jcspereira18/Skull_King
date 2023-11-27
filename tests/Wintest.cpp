@@ -7,9 +7,6 @@ Game game;
 TEST(Tests_player, WIN){
     cout << "WIN" << endl;
 
-    game.cards_deck.SetupCards();
-    game.cards_deck.shuffle();  
-
     vector<Card> test;    
 
     vector<Player> p;

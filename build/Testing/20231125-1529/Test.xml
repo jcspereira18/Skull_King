@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20231125-1529-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.22.1"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="LAPTOP-M1B52RIK"
+	OSRelease="5.15.133.1-microsoft-standard-WSL2"
+	OSVersion="#1 SMP Thu Oct 5 21:02:42 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="23"
+	ModelID="24"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="1024"
+	TotalPhysicalMemory="3381"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2096"
+	>
+	<Testing>
+		<StartDateTime>Nov 25 16:00 WET</StartDateTime>
+		<StartTestTime>1700928040</StartTestTime>
+		<TestList>
+			<Test>./tests/ExampleTests</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>ExampleTests</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/ExampleTests</FullName>
+			<FullCommandLine>/home/jcspereira/psw/Skull_King/build/tests/ExampleTests</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00475364</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/jcspereira/psw/Skull_King/build/tests/ExampleTests</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkj1vwyAQhnd+xY3JYGMnW6UOlVp1iNRaTjpFkUXsa0KLAQGu1X9f/JHIH0qVmw6el/c4uLSSkssTlIzLxRI+jSqBnlWJ9Cu3Gg1yw6i2Nd1+V0JkG6+lx4qLgmYFaktPSp0EOrQusCYfLGm7bLKs8Q7znOwfr3GAtC8cQ6PpCve5rbjDkOyDaxzgVagjEx1H+cONkiVKr0UXVHoiHnrufGYzLdgvGrKH9OMN2jiMSKgFSdoMug1YQ80lSRSXzj5APKHxv3Q1oTN8ROct9I3j65avbvK45dGAzwpc0CqaeV9QEE9ZPGQR2Z2x6UN6wi3MO3Rnb98f8S/bxftm/rKwiKC0y/v+qBODU46JJblvCBwyExSqluMRuzVaYJgMx3X89ZOn7fbluRmMThuSPwY1AZY=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Nov 25 16:00 WET</EndDateTime>
+		<EndTestTime>1700928040</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

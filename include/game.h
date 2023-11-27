@@ -15,7 +15,8 @@ class Game{
         int max = 0;
         int flag = 0;
         int special_points = 0;
-        int mermaid = 0;
+        int mermaid = -1;
+        int skull = -1;
 
     public:
         

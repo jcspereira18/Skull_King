@@ -185,6 +185,30 @@ ExampleTests/fast:
 	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/build
 .PHONY : ExampleTests/fast
 
+Cardstest.o: Cardstest.cpp.o
+.PHONY : Cardstest.o
+
+# target to build an object file
+Cardstest.cpp.o:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Cardstest.cpp.o
+.PHONY : Cardstest.cpp.o
+
+Cardstest.i: Cardstest.cpp.i
+.PHONY : Cardstest.i
+
+# target to preprocess a source file
+Cardstest.cpp.i:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Cardstest.cpp.i
+.PHONY : Cardstest.cpp.i
+
+Cardstest.s: Cardstest.cpp.s
+.PHONY : Cardstest.s
+
+# target to generate assembly for a file
+Cardstest.cpp.s:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Cardstest.cpp.s
+.PHONY : Cardstest.cpp.s
+
 Playerstest.o: Playerstest.cpp.o
 .PHONY : Playerstest.o
 
@@ -209,6 +233,54 @@ Playerstest.cpp.s:
 	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Playerstest.cpp.s
 .PHONY : Playerstest.cpp.s
 
+Scoretest.o: Scoretest.cpp.o
+.PHONY : Scoretest.o
+
+# target to build an object file
+Scoretest.cpp.o:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Scoretest.cpp.o
+.PHONY : Scoretest.cpp.o
+
+Scoretest.i: Scoretest.cpp.i
+.PHONY : Scoretest.i
+
+# target to preprocess a source file
+Scoretest.cpp.i:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Scoretest.cpp.i
+.PHONY : Scoretest.cpp.i
+
+Scoretest.s: Scoretest.cpp.s
+.PHONY : Scoretest.s
+
+# target to generate assembly for a file
+Scoretest.cpp.s:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Scoretest.cpp.s
+.PHONY : Scoretest.cpp.s
+
+Wintest.o: Wintest.cpp.o
+.PHONY : Wintest.o
+
+# target to build an object file
+Wintest.cpp.o:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Wintest.cpp.o
+.PHONY : Wintest.cpp.o
+
+Wintest.i: Wintest.cpp.i
+.PHONY : Wintest.i
+
+# target to preprocess a source file
+Wintest.cpp.i:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Wintest.cpp.i
+.PHONY : Wintest.cpp.i
+
+Wintest.s: Wintest.cpp.s
+.PHONY : Wintest.s
+
+# target to generate assembly for a file
+Wintest.cpp.s:
+	cd /home/jcspereira/psw/Skull_King/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/ExampleTests.dir/build.make tests/CMakeFiles/ExampleTests.dir/Wintest.cpp.s
+.PHONY : Wintest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -223,9 +295,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ExampleTests"
+	@echo "... Cardstest.o"
+	@echo "... Cardstest.i"
+	@echo "... Cardstest.s"
 	@echo "... Playerstest.o"
 	@echo "... Playerstest.i"
 	@echo "... Playerstest.s"
+	@echo "... Scoretest.o"
+	@echo "... Scoretest.i"
+	@echo "... Scoretest.s"
+	@echo "... Wintest.o"
+	@echo "... Wintest.i"
+	@echo "... Wintest.s"
 .PHONY : help
 
 

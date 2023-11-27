@@ -13,16 +13,6 @@ TEST(Tests_player, pl){
     vector<Player> players;
     vector<Card> cards_table;
 
-   
-    players.push_back(Player("player 1", test_p1));
-    players.push_back(Player("player 2", test_p2));
-    players.push_back(Player("player 3", test_p3));
-
-    players[0].bet = 0;
-    players[1].bet = 1;
-    players[2].bet = 2;
-
-
     for (int i = 0; i < 3; i++){
         test_p1.push_back(Card());
         test_p2.push_back(Card());
@@ -50,11 +40,19 @@ TEST(Tests_player, pl){
     test_p3[1].value = 8;
     test_p3[2].color = blue;
     test_p3[2].value = 13;
-   
 
-    cards_table.push_back(test_p1[0]);
-    cards_table.push_back(test_p2[0]);
-    cards_table.push_back(test_p3[0]);
+
+    players.push_back(Player("player 1", test_p1));
+    players.push_back(Player("player 2", test_p2));
+    players.push_back(Player("player 3", test_p3));
+
+    players[0].bet = 0;
+    players[1].bet = 1;
+    players[2].bet = 2;
+   
+    //1º round
+    for (int i = 0; i < 3; i++)
+        cards_table.push_back( players[i].hand[0] );
 
     EXPECT_EQ(
         2,
@@ -67,13 +65,12 @@ TEST(Tests_player, pl){
         1,
         players[0].points
     );
-
     cards_table.clear();  //clear table
 
-    cards_table.push_back(test_p3[1]);
-    cards_table.push_back(test_p1[1]);
-    cards_table.push_back(test_p2[1]);
-
+    //2º round
+    for (int i = 0; i < 3; i++)
+        cards_table.push_back( players[i].hand[1] );
+   
     EXPECT_EQ(
         1,
         gm.checkwin(cards_table, yellow)    
@@ -85,13 +82,12 @@ TEST(Tests_player, pl){
         1,
         players[0].points
     );
-
     cards_table.clear();  //clear table
 
-    cards_table.push_back(test_p1[2]);
-    cards_table.push_back(test_p2[2]);
-    cards_table.push_back(test_p3[2]);
-
+    //3º round
+    for (int i = 0; i < 3; i++)
+        cards_table.push_back( players[i].hand[2] );
+    
     EXPECT_EQ(
         1,
         gm.checkwin(cards_table, blue)    
@@ -103,8 +99,8 @@ TEST(Tests_player, pl){
         1,
         players[0].points
     );
-
     cards_table.clear();  //clear table
+
 
     players = gm.bet_points(players);
 
@@ -122,8 +118,7 @@ TEST(Tests_player, pl){
 
     EXPECT_EQ(
         -100,
-        players[2
-        ].score
+        players[2].score
     );
 
     //test winner

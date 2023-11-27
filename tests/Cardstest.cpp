@@ -110,6 +110,22 @@ TEST(Tests_cards, cards){
         3,
         g.checkwin(card_test, check_color)
     );
+
+    card_test[0].color = white;
+    card_test[0].value = 15; //sereia
+    card_test[1].color = black;
+    card_test[1].value = 2;
+    card_test[2].color = red;
+    card_test[2].value = 10;
+    card_test[3].color = white;
+    card_test[3].value = 17; //Skull King
+    check_color = -1;
+
+    cout << "Test Skull King and mermaid card" << endl;
+    EXPECT_EQ(
+        0,
+        g.checkwin(card_test, check_color)
+    );
 }
 
 //struct ExampleTests 
