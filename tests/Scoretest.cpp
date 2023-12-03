@@ -19,7 +19,6 @@ TEST(Test_score, SCORE){
         test_p3.push_back(Card());
     }
     
-
     test_p1[0].color = red;
     test_p1[0].value = 7;
     test_p1[1].color = white;
@@ -45,7 +44,6 @@ TEST(Test_score, SCORE){
     //Sereia e Skull king - 50 pontos 
     for (int i = 0; i < 3; i++)
         cards_table.push_back( players[i].hand[0] );
-
 
     players = game_s.order_players(game_s.checkwin(cards_table, red), players); 
 

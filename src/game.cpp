@@ -22,7 +22,7 @@ void Game::game_play(){
 
     }  
 
-    //bet_round();
+    bet_round();
 
     print_bet(players);
     

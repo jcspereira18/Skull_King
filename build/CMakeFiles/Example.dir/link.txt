@@ -1,2 +1,0 @@
-/usr/bin/ar qc libExample.a CMakeFiles/Example.dir/src/Example.cpp.o CMakeFiles/Example.dir/src/game.cpp.o CMakeFiles/Example.dir/src/player.cpp.o CMakeFiles/Example.dir/src/deck.cpp.o CMakeFiles/Example.dir/src/card.cpp.o
-/usr/bin/ranlib libExample.a
